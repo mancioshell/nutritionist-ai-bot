@@ -1,0 +1,31 @@
+{
+  "name": "nutritionist-ai-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "concurrently \"yarn start-ngrok\" \"tsx watch src/bot.ts\"",
+    "build": "tsc",
+    "format": "biome format --write",
+    "start-ngrok": "tsx scripts/ngrok.ts"
+  },
+  "dependencies": {
+    "@github/copilot": "^0.0.420",
+    "@github/copilot-sdk": "^0.1.29",
+    "@ngrok/ngrok": "^1.7.0",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.7.4",
+    "googleapis": "^171.4.0",
+    "grammy": "^1.40.0",
+    "tsx": "^4.21.0",
+    "youtube-transcript-plus": "^1.2.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@types/node": "20.11.17",
+    "concurrently": "^9.2.1",
+    "typescript": "5.8.3"
+  }
+}

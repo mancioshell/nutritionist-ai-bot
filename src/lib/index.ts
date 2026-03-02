@@ -124,6 +124,11 @@ export async function handler(
 
   console.debug("Creating or resuming session with ID:", sessionId);
 
+  const state = client.getState();
+  if (state !== "connected" && state !== "connecting") {
+    await client.start();
+  }
+
   client
     .ping()
     .then(() => {

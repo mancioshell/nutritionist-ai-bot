@@ -2,6 +2,8 @@
   "name": "nutritionist-ai-bot",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "main": "src/api/bot/route.ts",
   "scripts": {
     "local": "tsx src/api/bot/route.ts",
     "dev": "next dev",
@@ -11,8 +13,9 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@github/copilot-sdk": "^0.1.23",
-    "@vercel/kv": "^3.0.0",
+    "@github/copilot-sdk": "^0.1.29",
+    "@grammyjs/storage-redis": "^2.5.1",
+    "@upstash/redis": "^1.36.3",
     "dotenv": "^17.3.1",
     "googleapis": "^171.4.0",
     "grammy": "^1.40.0",
